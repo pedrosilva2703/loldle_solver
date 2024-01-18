@@ -241,7 +241,27 @@
         </regions>
         <release_year>2014</release_year>
     </champion>
-    
+
+    <champion>
+        <name>Fiddlesticks</name>
+        <gender>Other</gender>
+        <positions>
+            <position>Jungle</position>
+        </positions>
+        <species>
+            <specie>Demon</specie>
+            <specie>Spirit</specie>
+        </species>
+        <resource>Mana</resource>
+        <range>
+            <range_type>Ranged</range_type>
+        </range>   
+        <regions>
+            <region>Runeterra</region>
+        </regions>
+        <release_year>2009</release_year>
+    </champion>
+
     <champion>
         <name>Yasuo</name>
         <gender>Male</gender>

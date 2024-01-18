@@ -11,6 +11,10 @@ import time
 import pandas as pd
 from bs4 import BeautifulSoup
 
+correct_str = "square-good"
+partial_str = "square-partial"
+wrong_str = "square-bad"
+
 def accept_cookies(wd):
     accept_cookies_button = WebDriverWait(wd, 10).until(
         EC.element_to_be_clickable((By.CLASS_NAME, 'fc-button.fc-cta-consent.fc-primary-button'))
@@ -65,3 +69,11 @@ def is_element_present(container, by, value):
 def is_finished(wd):
     end_container = wd.find_element(By.ID, "endId")
     return is_element_present(end_container, By.CLASS_NAME, "finished")
+
+def is_correct(answer_container, square_xpath, square_pos):
+    correct = is_element_present(answer_container, By.XPATH, square_xpath.format(correct_str, square_pos))
+    partial = is_element_present(answer_container, By.XPATH, square_xpath.format(partial_str, square_pos))
+    return (correct or partial)
+
+def is_release_date_superior(answer_container, square_xpath, square_pos):
+    return is_element_present(answer_container, By.XPATH, square_xpath.format("square-superior", square_pos))
