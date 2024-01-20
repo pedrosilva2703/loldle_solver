@@ -3,7 +3,7 @@ from champion import load_champions_from_xml
 
 xml_file_path = "champions_data.xml"
 loldle_website = "https://loldle.net/classic"
-total_champions = 1 #168
+total_champions = 168
 gender_pos = 0
 position_pos = 1
 species_pos = 2
@@ -14,6 +14,7 @@ year_pos = 6
 
 
 champions_list = load_champions_from_xml(xml_file_path)
+#print(len(champions_list))
 # for champion in champions_list:
 #     champion.display_info()
 
@@ -26,30 +27,20 @@ wd.get(loldle_website)
 
 accept_cookies(wd)
 set_english(wd)
-
-
-
-# first_container = answers_container.find_element(By.XPATH, './div/div[1]')
-
-# correct_gender = is_element_present(first_container, By.XPATH, '//div[contains(@class, "square-good") and contains(@class, "0")]')
-# if correct_gender:
-#     print("Gender correct")
-# else:
-#     print("Gender wrong")
-
   
-
+answers_container = wd.find_element(By.CLASS_NAME, "answers-container.classic-answers-container")
 
 for i in range(1, 10):
-    answers_container = wd.find_element(By.CLASS_NAME, "answers-container.classic-answers-container")
     #select first option from the list
     current_guess = champions_list[0]
 
     #input guess
     input_guess(wd, current_guess.name)
-    time.sleep(5)
+    
+    time.sleep(6)
 
     if is_finished(wd):
+        print("GAME WON")
         break
     
     last_answer_container = answers_container.find_element(By.XPATH, f'./div[{i}]')
@@ -95,41 +86,6 @@ for i in range(1, 10):
     if is_correct(last_answer_container, square_xpath, year_pos):
         champions_list = [champion for champion in champions_list if champion.release_year == current_guess.release_year]
     elif is_release_date_superior(last_answer_container, square_xpath, year_pos):
-        champions_list = [champion for champion in champions_list if champion.release_year >= current_guess.release_year]
+        champions_list = [champion for champion in champions_list if champion.release_year > current_guess.release_year]
     else:
-        champions_list = [champion for champion in champions_list if champion.release_year <= current_guess.release_year]
-
-
-
-
-
-
-
-
-
-
-# answers_container = wd.find_element(By.CLASS_NAME, "answers-container.classic-answers-container")
-# input_guess("Karma")
-# second_container = answers_container.find_element(By.XPATH, './div[2]')
-
-# correct_gender = is_element_present(second_container, By.XPATH, '//div[contains(@class, "square-good") and contains(@class, "0")]')   
-
-# if correct_gender:
-#     print("Gender correct")
-# else:
-#     print("Gender wrong")
-
-#answers_container.find_element(By.XPATH, '//div[contains(@class, "square-good") and contains(@class, "0")]')
-
-#/html/body/div[1]/div[1]/div[7]/div/div[2]/div[4]/div[3]/div[2] Karma
-#/html/body/div[1]/div[1]/div[7]/div/div[2]/div[4]/div[3]/div[1] Fizz
-#/html/body/div[1]/div[1]/div[7]/div/div[2]/div[4]/div[3]/div[1]/div
-#/html/body/div[1]/div[1]/div[7]/div/div[2]/div[4]/div[3]/div[1]/div/div[2]
-#/html/body/div[1]/div[1]/div[7]/div/div[2]/div[4]/div[3] Box
-    
-#/html/body/div[1]/div[1]/div[7]/div/div[2]/div[4]/div[3]/div               classic answer
-#/html/body/div[1]/div[1]/div[7]/div/div[2]/div[4]/div[3]/div/div           square container
-#/html/body/div[1]/div[1]/div[7]/div/div[2]/div[4]/div[3]/div/div/div[3]    square position
-
-#/html/body/div[1]/div[1]/div[7]/div/div[2]/div[4]/div[3]
-#/html/body/div[1]/div[1]/div[7]/div/div[2]/div[4]/div[3]/div[2]
+        champions_list = [champion for champion in champions_list if champion.release_year < current_guess.release_year]
