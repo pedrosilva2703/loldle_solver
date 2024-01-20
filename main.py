@@ -21,6 +21,7 @@ champions_list = load_champions_from_xml(xml_file_path)
 options = wd.ChromeOptions()
 options.add_experimental_option("detach", True)
 options.add_experimental_option('excludeSwitches', ['enable-logging'])
+options.add_argument("--start-maximized")
 
 wd = wd.Chrome(options=options)
 wd.get(loldle_website)
