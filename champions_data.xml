@@ -1,6 +1,25 @@
 <champions>
 
     <champion>
+        <name>Fizz</name>
+        <gender>Male</gender>
+        <positions>
+            <position>Middle</position>
+        </positions>
+        <species>
+            <specie>Yordle</specie>
+        </species>
+        <resource>Mana</resource>
+        <range>
+            <range_type>Melee</range_type>
+        </range>   
+        <regions>
+            <region>Bilgewater</region>
+        </regions>
+        <release_year>2011</release_year>
+    </champion>
+    
+    <champion>
         <name>Aatrox</name>
         <gender>Male</gender>
         <positions>
@@ -678,24 +697,7 @@
         <release_year>2009</release_year>
     </champion>
 
-    <champion>
-        <name>Fizz</name>
-        <gender>Male</gender>
-        <positions>
-            <position>Middle</position>
-        </positions>
-        <species>
-            <specie>Yordle</specie>
-        </species>
-        <resource>Mana</resource>
-        <range>
-            <range_type>Melee</range_type>
-        </range>   
-        <regions>
-            <region>Bilgewater</region>
-        </regions>
-        <release_year>2011</release_year>
-    </champion>
+
 
     <champion>
         <name>Galio</name>
