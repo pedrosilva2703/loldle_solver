@@ -1,15 +1,9 @@
 from selenium import webdriver as wd
-from selenium import webdriver as wd
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException
-
 import chromedriver_binary
-import random
-import time
-import pandas as pd
-from bs4 import BeautifulSoup
 
 correct_str = "square-good"
 partial_str = "square-partial"

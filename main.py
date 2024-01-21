@@ -1,5 +1,6 @@
 from web_interactions import *
 from champion import load_champions_from_xml
+import time
 
 xml_file_path = "champions_data.xml"
 loldle_website = "https://loldle.net/classic"
