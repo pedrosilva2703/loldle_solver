@@ -31,7 +31,7 @@ set_english(wd)
   
 answers_container = wd.find_element(By.CLASS_NAME, "answers-container.classic-answers-container")
 
-for i in range(1, 10):
+for i in range(1, total_champions):
     #select first option from the list
     current_guess = champions_list[0]
 

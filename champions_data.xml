@@ -379,6 +379,26 @@
     </champion>
 
     <champion>
+        <name>Camille</name>
+        <gender>Female</gender>
+        <positions>
+            <position>Top</position>
+        </positions>
+        <species>
+            <specie>Cyborg</specie>
+            <specie>Human</specie>
+        </species>
+        <resource>Mana</resource>
+        <range>
+            <range_type>Melee</range_type>
+        </range>   
+        <regions>
+            <region>Piltover</region>
+        </regions>
+        <release_year>2016</release_year>
+    </champion>
+
+    <champion>
         <name>Cassiopeia</name>
         <gender>Female</gender>
         <positions>
