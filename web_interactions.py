@@ -66,8 +66,11 @@ def is_finished(wd):
 
 def is_correct(answer_container, square_xpath, square_pos):
     correct = is_element_present(answer_container, By.XPATH, square_xpath.format(correct_str, square_pos))
+    return correct
+
+def is_partially_correct(answer_container, square_xpath, square_pos):
     partial = is_element_present(answer_container, By.XPATH, square_xpath.format(partial_str, square_pos))
-    return (correct or partial)
+    return partial
 
 def is_release_date_superior(answer_container, square_xpath, square_pos):
     return is_element_present(answer_container, By.XPATH, square_xpath.format("square-superior", square_pos))
