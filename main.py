@@ -45,8 +45,8 @@ for i in range(1, total_champions):
         print("GAME WON")
         break
     
-    last_answer_container = answers_container.find_element(By.XPATH, f'./div[{i}]')
-    square_xpath = '//div[contains(@class, "{}") and contains(@class, "{}")]'
+    last_answer_container = answers_container.find_element(By.XPATH, f'./div[{i}]/div')
+    square_xpath = './div[contains(@class, "{}") and contains(@class, "{}")]'
     
     #Filter gender
     if is_correct(last_answer_container, square_xpath, gender_pos):
@@ -60,7 +60,7 @@ for i in range(1, total_champions):
     else:
         champions_list = [champion for champion in champions_list if not set(champion.positions).intersection(current_guess.positions)]
 
-    #Filter position 
+    #Filter species 
     if is_correct(last_answer_container, square_xpath, species_pos):
         champions_list = [champion for champion in champions_list if set(champion.species).intersection(current_guess.species)]
     else:
@@ -84,6 +84,7 @@ for i in range(1, total_champions):
     else:
         champions_list = [champion for champion in champions_list if not set(champion.regions).intersection(current_guess.regions)]
 
+
     #Filter year
     if is_correct(last_answer_container, square_xpath, year_pos):
         champions_list = [champion for champion in champions_list if champion.release_year == current_guess.release_year]
@@ -91,3 +92,4 @@ for i in range(1, total_champions):
         champions_list = [champion for champion in champions_list if champion.release_year > current_guess.release_year]
     else:
         champions_list = [champion for champion in champions_list if champion.release_year < current_guess.release_year]
+
