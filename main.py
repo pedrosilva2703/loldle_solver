@@ -58,6 +58,7 @@ for i in range(1, total_champions):
     if is_correct(last_answer_container, square_xpath, position_pos):
         champions_list = [champion for champion in champions_list if set(champion.positions) == set(current_guess.positions)]
     elif is_partially_correct(last_answer_container, square_xpath, position_pos):
+        champions_list = [champion for champion in champions_list if not set(champion.positions) == set(current_guess.positions)]
         champions_list = [champion for champion in champions_list if set(champion.positions).intersection(current_guess.positions)]
     else:
         champions_list = [champion for champion in champions_list if not set(champion.positions).intersection(current_guess.positions)]
@@ -66,6 +67,7 @@ for i in range(1, total_champions):
     if is_correct(last_answer_container, square_xpath, species_pos):
         champions_list = [champion for champion in champions_list if set(champion.species) == set(current_guess.species)]
     elif is_partially_correct(last_answer_container, square_xpath, species_pos):
+        champions_list = [champion for champion in champions_list if not set(champion.species) == set(current_guess.species)]
         champions_list = [champion for champion in champions_list if set(champion.species).intersection(current_guess.species)]
     else:
         champions_list = [champion for champion in champions_list if not set(champion.species).intersection(current_guess.species)]
@@ -80,6 +82,7 @@ for i in range(1, total_champions):
     if is_correct(last_answer_container, square_xpath, rangetype_pos):
         champions_list = [champion for champion in champions_list if set(champion.range) == set(current_guess.range)]
     elif is_partially_correct(last_answer_container, square_xpath, rangetype_pos):
+        champions_list = [champion for champion in champions_list if not set(champion.range) == set(current_guess.range)]
         champions_list = [champion for champion in champions_list if set(champion.range).intersection(current_guess.range)]
     else:
         champions_list = [champion for champion in champions_list if not set(champion.range).intersection(current_guess.range)]
@@ -88,6 +91,7 @@ for i in range(1, total_champions):
     if is_correct(last_answer_container, square_xpath, regions_pos):
         champions_list = [champion for champion in champions_list if set(champion.regions) == set(current_guess.regions)]
     elif is_partially_correct(last_answer_container, square_xpath, regions_pos):
+        champions_list = [champion for champion in champions_list if not set(champion.regions) == set(current_guess.regions)]
         champions_list = [champion for champion in champions_list if set(champion.regions).intersection(current_guess.regions)]
     else:
         champions_list = [champion for champion in champions_list if not set(champion.regions).intersection(current_guess.regions)]
