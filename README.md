@@ -1,14 +1,29 @@
-# loldle_solver
-LoLdle solver
+# LoLdle solver (working 01-25-2024)
 
-For fun project
+This script can solve the classic mode of League of Legends wordle (LoLdle) automatically.
 
-```bash
-test
+I made this project just for educational purposes and for fun.
 
+## Quick showcase
+
+
+
+## Dependencies
+These are the required dependencies to run this script in a conda environment.
+
+- Selenium
 ```python
-pip install your-package-name
+conda install selenium
+```
 
+- Chrome driver binary
+```python
+conda install -c conda-forge python-chromedriver-binary
+```
+
+- Pandas
+```python
+conda install pandas
 
   
 
