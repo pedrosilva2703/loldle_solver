@@ -6,6 +6,9 @@ For fun project
 ```bash
 test
 
+```python
+pip install your-package-name
+
 
   
 
