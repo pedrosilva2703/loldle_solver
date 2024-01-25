@@ -1375,7 +1375,7 @@
             <specie>Human</specie>
             <specie>Spiritualist</specie>
         </species>
-        <resource>Mana</resource>
+        <resource>Energy</resource>
         <range>
             <range_type>Melee</range_type>
         </range>   
