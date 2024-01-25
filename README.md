@@ -4,3 +4,5 @@ LoLdle solver
 For fun project
 
 Work in progress
+
+$ test
