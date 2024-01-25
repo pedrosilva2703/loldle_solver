@@ -2,11 +2,11 @@
 
 This script can solve the classic mode of League of Legends wordle (LoLdle) automatically.
 
-I made this project just for educational purposes and for fun.
+I made this project for educational purposes and just for fun.
 
 ## Quick showcase
 
-
+![loldle-solver-gif](https://github.com/pedrosilva2703/loldle_solver/assets/78810496/9c32bd27-b73f-4766-9f79-30c3f93a405b)
 
 ## Dependencies
 These are the required dependencies to run this script in a conda environment.
