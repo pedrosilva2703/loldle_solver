@@ -3,8 +3,9 @@ LoLdle solver
 
 For fun project
 
-Work in progress
+'''bash
+test
 
-  $ teste
+
   
 
