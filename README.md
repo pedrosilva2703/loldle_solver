@@ -4,7 +4,7 @@ This script can solve the classic mode of League of Legends wordle (LoLdle) auto
 
 I made this project for educational purposes and just for fun.
 
-## Quick showcase
+## Showcase
 
 ![loldle-solver-gif](https://github.com/pedrosilva2703/loldle_solver/assets/78810496/9c32bd27-b73f-4766-9f79-30c3f93a405b)
 
