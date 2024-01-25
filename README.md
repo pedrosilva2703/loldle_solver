@@ -3,7 +3,7 @@ LoLdle solver
 
 For fun project
 
-'''bash
+```bash
 test
 
 
