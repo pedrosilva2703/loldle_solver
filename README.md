@@ -11,17 +11,17 @@ I made this project just for educational purposes and for fun.
 ## Dependencies
 These are the required dependencies to run this script in a conda environment.
 
-- Selenium
+Selenium
 ```python
 conda install selenium
 ```
 
-- Chrome driver binary
+Chrome driver binary
 ```python
 conda install -c conda-forge python-chromedriver-binary
 ```
 
-- Pandas
+Pandas
 ```python
 conda install pandas
 ```
