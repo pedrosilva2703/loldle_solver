@@ -8,6 +8,7 @@ import chromedriver_binary
 correct_str = "square-good"
 partial_str = "square-partial"
 wrong_str = "square-bad"
+superior_str = "square-superior"
 
 def accept_cookies(wd):
     accept_cookies_button = WebDriverWait(wd, 10).until(
@@ -73,4 +74,4 @@ def is_partially_correct(answer_container, square_xpath, square_pos):
     return partial
 
 def is_release_date_superior(answer_container, square_xpath, square_pos):
-    return is_element_present(answer_container, By.XPATH, square_xpath.format("square-superior", square_pos))
+    return is_element_present(answer_container, By.XPATH, square_xpath.format(superior_str, square_pos))

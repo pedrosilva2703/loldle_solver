@@ -36,7 +36,6 @@ for i in range(1, total_champions):
     #select first option from the list
     current_guess = champions_list[0]
 
-    #input guess
     input_guess(wd, current_guess.name)
     
     time.sleep(6)
